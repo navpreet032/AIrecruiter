@@ -91,6 +91,7 @@ def get_google_scholar_url(prof_name, college):
 
 def get_student_url(student_name, prof_name, college):    
     query = f" {student_name}, {college} Google Scholar"
+    print(f'student url: {query}')
     for url in search(query, num_results=10):
         if 'scholar.google.com/citations' in url:
             return url
